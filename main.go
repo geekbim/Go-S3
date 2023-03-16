@@ -66,8 +66,6 @@ func main() {
 		c.HTML(http.StatusOK, "index.html", gin.H{
 			"image": "https://" + *bucket + ".s3." + os.Getenv("AWS_REGION") + "." + "amazonaws.com/" + file.Filename,
 		})
-
-		return
 	})
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
